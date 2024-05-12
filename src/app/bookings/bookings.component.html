@@ -1,0 +1,34 @@
+<div class="flex flex-row">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Agendamiento de reuniones</h5>
+            <form [formGroup]="appointmentForm" (ngSubmit)="scheduleMeeting()">
+                <div class="form-group">
+                    <label for="summary">Asunto </label>
+                    <input type="text" id="summary" formControlName="summary" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="location">Localidad </label>
+                    <input type="text" id="location" formControlName="location" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="description">Descripcion </label>
+                    <input type="text" id="description" formControlName="description" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="appointmentTime">Hora de reunion</label>
+                    <input type="datetime-local" id="appointmentTime" formControlName="appointmentTime"
+                        class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email </label>
+                    <input type="email" id="email" formControlName="email" class="form-control" />
+                </div>
+                <br />
+                <button type="submit" class="btn btn-primary">Schedule Appointment</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="eventContainer"></div>
+</div>
